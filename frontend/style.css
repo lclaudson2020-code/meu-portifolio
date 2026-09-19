@@ -1,0 +1,22 @@
+/* esse comando serve pra zerar margens padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variáveis de cores (Estilo Clean) */
+:root {
+    --bg-color: #f8f9ffa;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --accent-color: #0f172a;
+    --accent-hover: #1e293b;
+    --border-color: #e5e7eb;
+}
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystem, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 0 5%;
+}
