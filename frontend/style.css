@@ -80,3 +80,48 @@ body {
     --accent-hover: #0284c7;
     --border-color: #1e293b;
 }
+
+/* Seção de Habilidades */
+.skills-section {
+    padding: 5rem 0;
+    border-top: 1px solid var(--border-color);
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.5px;
+}
+/* Grid auto-responsivo */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+/* Card individual */
+.skill-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border: 1.8px;
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 20px rgba(0, 0, 0, 0.1);
+}
+.skill-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
