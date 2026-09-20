@@ -98,21 +98,49 @@ body {
 /* Grid auto-responsivo */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    /* Define 3 colunas de 280px em ecrãs grandes */
+    grid-template-columns: repeat(3, 280px);
+    gap: 2rem 1.5rem;
+    justify-content: center; /* Centraliza os cards dentro da grid */
+    align-items: center; /* Impede que os cards estiquem na vertical */
+    margin: 0 auto; /* Centraliza a grid horizontalmente */
+    width: 100%; /* Garante que a grid ocupe toda a largura disponível */
 }
+
 /* Card individual */
 .skill-card {
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
-    border: 1.8px;
-    border-radius: 12px;
     padding: 1.8rem;
+    border-radius: 12px;
+    height: 200px; 
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .skill-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--card-shadow);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 280px);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        /* minmax permite ao card encolher se o telemóvel for muito pequeno (ex: 320px) */
+        grid-template-columns: minmax(0, 280px); 
+        padding: 0 1rem;
+    }
 }
 .skill-icon {
   font-size: 2rem;
@@ -128,4 +156,37 @@ body {
 .skill-card p {
   font-size: 0.95rem;
   color: var(--text-secondary);
+}
+
+.btn,
+.btn-visited {
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+/* Botão Principal (Ver Projetos) */
+.btn-primary, 
+.btn-primary:visited {
+  background-color: var(--accent-color);
+  color: #ffffff; /* Texto sempre branco para dar contraste */
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+}
+
+/* Botão Secundário (Entrar em Contato) */
+.btn-secondary, 
+.btn-secondary:visited {
+  border: 1px solid var(--border-color);
+  color: var(--text-primary); /* Pega a cor principal de texto do tema */
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
 }
