@@ -12,6 +12,8 @@
     --accent-color: #0f172a;
     --accent-hover: #1e293b;
     --border-color: #e5e7eb;
+    /* sombra pro modo claro*/
+    --card-shadow: 0 25px 20px rgba(0, 0, 0, 0.1)
 }
 body {
     font-family: system-ui, -apple-system, BlinkMacSystem, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Arial, Helvetica, sans-serif;
@@ -79,6 +81,8 @@ body {
     --accent-color: #38bdf8;    /* destaque em tom de azul claro*/
     --accent-hover: #0284c7;
     --border-color: #1e293b;
+    /* sombra pro modo escuro*/
+    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.1);
 }
 
 /* Seção de Habilidades */
@@ -108,7 +112,7 @@ body {
 }
 .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 25px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
 }
 .skill-icon {
   font-size: 2rem;
