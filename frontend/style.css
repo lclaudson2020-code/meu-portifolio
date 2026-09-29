@@ -4,17 +4,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Variáveis de cores (Estilo Clean) */
 :root {
-    --bg-color: #f8f9ffa;
+    --bg-color: #f8f9fa; /* Corrigido: era #f8f9ffa */
     --text-primary: #111827;
     --text-secondary: #4b5563;
     --accent-color: #0f172a;
     --accent-hover: #1e293b;
     --border-color: #e5e7eb;
     /* sombra pro modo claro*/
-    --card-shadow: 0 25px 20px rgba(0, 0, 0, 0.1)
+    --card-shadow: 0 25px 20px rgba(0, 0, 0, 0.1);
 }
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystem, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Arial, Helvetica, sans-serif;
     background-color: var(--bg-color);
@@ -23,6 +25,7 @@ body {
     padding: 0 5%;
 }
 
+/* HEADER & NAVEGAÇÃO */
 .header {
     display: flex;
     justify-content: space-between;
@@ -30,6 +33,7 @@ body {
     padding: 2rem 0;
     border-bottom: 1px solid var(--border-color);
 }
+
 .logo a {
     font-weight: 700;
     font-size: 1.2rem;
@@ -37,11 +41,32 @@ body {
     color: var(--text-primary);
     letter-spacing: 1px;
 }
-.nav ul {
+
+/* Estilização da lista do menu para tirar as bolinhas e alinhar */
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
+
+/* Links do Menu do Header */
+.nav-links a,
+.nav-links a:visited {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* SEÇÃO HERO */
 .hero {
     display: flex;
     align-items: center;
@@ -50,13 +75,67 @@ body {
     padding: 5rem 0;
     min-height: 70vh;
 }
+
+/* Conteúdo da Hero */
+.hero-content {
+    max-width: 750px;
+}
+
+/* Badge de Apresentação */
+.badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    background-color: rgba(56, 189, 248, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+/* Título Principal */
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--accent-color); /* Aplica a cor do tema ao seu nome */
+}
+
+/* Descrição do Perfil */
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 580px;
+    margin-bottom: 2rem;
+}
+
+.hero-description strong {
+    color: var(--text-primary); /* Destaca as linguagens sem poluir */
+}
+
+/* Imagem da Hero */
 .hero-image img {
-    width: 320px;
-    height: 320px;
+    width: 360px;
+    height: 360px;
+    border-radius: 70%;
     object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #ffffff;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8);
+    border: 5px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para Celulares e Tablets */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; /* Ajustado de .hero-section para .hero */
+        text-align: center;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
 }
 /* botão dark thme */
 .theme-btn {
@@ -285,4 +364,11 @@ body {
 
 .btn-link-primary {
   color: var(--accent-color);
+}
+.skill-icon {
+  width: 32px;        /* Define a largura do ícone */
+  height: 32px;       /* Define a altura do ícone */
+  object-fit: contain; /* Garante que a imagem não fique distorcida */
+  margin-bottom: 0.8rem;
+  display: block;
 }

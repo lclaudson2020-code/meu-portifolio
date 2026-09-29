@@ -16,73 +16,77 @@
         </div>
         <nav class="nav">
             
-            <ul>
+            <ul class="nav-links">
                 <li> <!-- botão  de tema dark-->
                     <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
                 🌙
                     </button>
                 </li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
            
         </nav>
     </header>
     <!-- Conteúdo Principal -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Olá!
-            </h1>
-            <h1>Me chamo Claudson Luciano, sou desenvolvedor de software focado em back-end utilizando a linguagem <b>Python</b> como principal e demais ferramentas como <b>SQLite</b> para banco de dados. Além disso, conheço um pouco de front-end utilizando HTML, CSS e JavaScript.</h1>
-            <p>
+    <section id="sobre" class="hero"> 
+  
+        <div class="hero-content"> <!-- Bloco do Texto -->
+            <span class="badge">Desenvolvedor de Software</span>
+            <h1>Olá, me chamo <span class="highlight">Claudson Luciano</span>.</h1>
+            <p class="hero-description">
+            Desenvolvedor com foco em <strong>Back-end</strong> utilizando <strong>Python</strong> e <strong>SQLite</strong> na construção de soluções eficientes. Também possuo vivência em desenvolvimento <strong>Front-end</strong> com HTML5, CSS3 e JavaScript.
+            </p>
             <div class="hero-buttons">
                 <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
                 <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
             </div>
         </div>
+
+        <!-- Bloco da Imagem (PRECISA ESTAR DENTRO DA SECTION HERO) -->
         <div class="hero-image">
-            <img src="foto_minha.JPEG" alt="Foto de Claudson Luciano">   
-            </div>
+            <img src="foto_minha.JPEG" alt="Foto de Claudson Luciano">
         </div>
     </section>
+
     <section id="habilidades" class="skills-section">
         <h2 class="section-title">Habilidades & Ferramentas</h2>
         <div class="skills-grid">
   <div class="skill-card">
-    <span class="skill-icon">🎨</span>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Ícone do CSS3" class="skill-icon">
     <h3>CSS3</h3>
     <p>Flexbox, Grid, Variáveis e Design Responsivo.</p>
   </div>
 
   <div class="skill-card">
-    <span class="skill-icon">⚡</span>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Ícone do JavaScript" class="skill-icon">
     <h3>JavaScript</h3>
     <p>Manipulação do DOM, eventos e ES6+.</p>
   </div>
 
   <div class="skill-card">
-    <span class="skill-icon">🐍</span>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Ícone do Python" class="skill-icon">
     <h3>Python</h3>
     <p>Desenvolvimento back-end e automação.</p>
   </div>
 
   <div class="skill-card">
-    <span class="skill-icon">🗄️</span>
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="Ícone do SQLite" class="skill-icon">
     <h3>SQLite</h3>
     <p>Manipulação de banco de dados e consultas SQL.</p>
   </div>
 
   
   <div class="skill-card">
-    <span class="skill-icon">🗄️</span>
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Ícone do Node.js" class="skill-icon">
     <h3>Node.js</h3>
     <p>Desenvolvimento back-end e automação.</p>
   </div>
 
   <div class="skill-card">
-    <span class="skill-icon">🔧</span>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Ícone do Git" class="skill-icon">
     <h3>Git & GitHub</h3>
     <p>Controle de versão e gestão de repositórios.</p>
   </div>
