@@ -372,3 +372,150 @@ body {
   margin-bottom: 0.8rem;
   display: block;
 }
+/* Dimensiona e colore o SVG do contato */
+.contact-icon-svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--text-primary); /* Acompanha o texto no Dark e Light mode */
+  flex-shrink: 0;
+  transition: fill 0.2s ease;
+}
+
+.contact-card:hover .contact-icon-svg {
+  fill: var(--accent-color); /* Muda para a cor de destaque ao passar o mouse */
+}
+
+/* ==========================================
+   SEÇÃO DE CONTATO
+   ========================================== */
+.contact-section {
+    padding: 5rem 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.contact-description {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+/* CARDS DE CONTATO */
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+  box-shadow: var(--card-shadow);
+}
+/* ÍCONES (SVG E IMG) */
+.contact-icon-svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--text-primary);
+    flex-shrink: 0;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+/* Garante a proporção correta para a imagem do GitHub (Devicon) */
+.contact-card img.contact-icon-svg {
+    object-fit: contain;
+}
+
+.contact-card:hover .contact-icon-svg {
+    fill: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.contact-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-primary);
+}
+
+.contact-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* ==========================================
+   RODAPÉ (FOOTER)
+   ========================================== */
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 3rem;
+}
+
+/* Link interno do Card */
+.contact-card-content {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  flex: 1;
+  text-align: left;
+}
+/* Botão de Copiar */
+.btn-copy {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.btn-copy:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Estado de Sucesso ao Copiar */
+.btn-copy.copied {
+  background-color: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+.btn-copy span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+}
